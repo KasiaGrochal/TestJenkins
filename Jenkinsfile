@@ -48,16 +48,13 @@ pipeline {
 
         post{
         always{
-        /* emailext (
+        emailext (
+        to: 'kgrochal@sii.pl',
         mimeType: 'text/html',
         subject: 'Test',
         body: 'Test Results:'+
-        'Result for pageTitleTHIRDTest: '+ pageTitleTHIRDTestResult */
-emailext (
-      subject: "Test",
-      body: """<p>Test Results:</p>""" + pageTitleTHIRDTestResult
-      to: 'kgrochal@sii.pl'
-    )
+        'Result for pageTitleTHIRDTest: '+ pageTitleTHIRDTestResult
+
         }
         }
     }
