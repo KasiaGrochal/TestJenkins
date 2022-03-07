@@ -53,7 +53,7 @@ pipeline {
         subject: 'Test',
         body: 'Test Results:'+
         'Result for pageTitleTHIRDTest: '+ pageTitleTHIRDTestResult
-        to: kgrochal@sii.pl
+
         }
         }
     }
