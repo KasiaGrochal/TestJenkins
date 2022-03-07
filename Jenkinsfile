@@ -12,10 +12,15 @@ pipeline {
                 echo 'OK compile'
             }
         }
-        stage('Test') {
+        stage('pageTitleTHIRDTest') {
             steps {
                 bat 'mvn test -Dmaven.pageTitleTHIRD'
-                echo 'OK test'
+                echo 'OK test THIRD'
+            }
+        stage('pageTitleSECONDTest') {
+            steps {
+                 bat 'mvn test -Dmaven.pageTitleSECOND'
+                 echo 'OK test'
             }
 
             post {
