@@ -17,17 +17,18 @@ pipeline {
                 bat 'mvn test -Dmaven.pageTitleTHIRD'
                 echo 'OK test THIRD'
             }
+            }
         stage('pageTitleSECONDTest') {
             steps {
                  bat 'mvn test -Dmaven.pageTitleSECOND'
                  echo 'OK test'
             }
-
+}
             post {
                 always {
                     junit '**/target/surefire-reports/TEST-*.xml'
                     }
                 }
-            }
+
         }
     }
