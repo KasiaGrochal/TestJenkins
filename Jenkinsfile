@@ -45,4 +45,14 @@ pipeline {
                             }
                         }
         }
+
+        post{
+        always{
+        emailtext to: kgrochal@sii.pl
+        mimeType: 'text/html',
+        subject: 'Test',
+        body: 'Test Results:'+
+        'Result for pageTitleTHIRDTest: '+ pageTitleTHIRDTestResult
+        }
+        }
     }
