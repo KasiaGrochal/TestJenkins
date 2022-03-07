@@ -56,7 +56,7 @@ pipeline {
 emailext (
       subject: "Test",
       body: """<p>Test Results:</p>""" + pageTitleTHIRDTestResult
-      to: kgrochal@sii.pl
+      to: 'kgrochal@sii.pl'
     )
         }
         }
