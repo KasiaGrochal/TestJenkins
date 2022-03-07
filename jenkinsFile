@@ -5,7 +5,7 @@ pipeline {
         stage('Compile') {
             steps {
                 echo 'First build'
-                git branch: 'master', url: 'https://github.com/KasiaGrochal/ReadYamlNew.git'
+                git branch: 'master', url: 'https://github.com/KasiaGrochal/TestJenkins.git'
                 bat 'mvn clean compile'
                 echo 'OK compile'
             }
