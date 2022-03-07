@@ -15,20 +15,14 @@ pipeline {
         stage('pageTitleTHIRDTest') {
             steps {
                 bat 'mvn test -Dmaven.pageTitleTHIRD'
-                echo 'OK test THIRD'
+                echo 'OK test'
             }
-            }
-        stage('pageTitleSECONDTest') {
-            steps {
-                 bat 'mvn test -Dmaven.pageTitleSECOND'
-                 echo 'OK test'
-            }
-}
+
             post {
                 always {
                     junit '**/target/surefire-reports/TEST-*.xml'
                     }
                 }
-
+            }
         }
     }
