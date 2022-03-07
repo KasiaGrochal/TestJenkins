@@ -1,4 +1,4 @@
-def test1Result =''
+def pageTitleTHIRDTestResult =''
 
 pipeline {
     agent any
@@ -19,8 +19,16 @@ pipeline {
             }
 
             post {
-                always {
-                    junit '**/target/surefire-reports/TEST-*.xml'
+                success {
+                script{
+                pageTitleTHIRDTestResult = 'success'
+                }
+
+                    }
+                    failure{
+                    script{
+                    pageTitleTHIRDTestResult = 'success'
+                    }
                     }
                 }
             }
