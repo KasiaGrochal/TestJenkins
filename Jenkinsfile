@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'mvn -Dmaven.pageTitleTHIRD'
+                bat 'mvn test -Dmaven.pageTitleTHIRD'
                 echo 'OK test'
             }
 
