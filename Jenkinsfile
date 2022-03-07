@@ -1,3 +1,5 @@
+def test1Result =''
+
 pipeline {
     agent any
 
@@ -12,7 +14,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'mvn clean test'
+                bat 'mvn -Dgroups="pageTitleTHIRD'
                 echo 'OK test'
             }
 
