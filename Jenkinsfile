@@ -48,7 +48,7 @@ pipeline {
 
         post{
         always{
-        emailext (
+        emailext
         to: 'kgrochal@sii.pl',
         mimeType: 'text/html',
         subject: 'Test',
