@@ -14,7 +14,7 @@ pipeline {
         }
         stage('pageTitleTHIRDTest') {
             steps {
-                bat 'mvn test -Dmaven.pageTitleTHIRD'
+                bat 'mvn clean test -DEnv_Value='+environments+' -Dmaven.pageTitleTHIRD'
                 echo 'OK test'
             }
 
@@ -34,7 +34,7 @@ pipeline {
             }
             stage('pageTitleSECONDTest') {
                         steps {
-                            bat 'mvn test -Dmaven.pageTitleSECOND'
+                            bat 'mvn clean test -DEnv_Value='+environments+' -Dmaven.pageTitleSECOND'
                             echo 'OK test'
                         }
 
