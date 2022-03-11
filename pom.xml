@@ -118,7 +118,7 @@
                 <version>${maven.surefire.plugin.version}</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <Env_Value></Env_Value>
+                        <Env_Value>prod</Env_Value>
                         <Browser_Value></Browser_Value>
                     </systemPropertyVariables>
 

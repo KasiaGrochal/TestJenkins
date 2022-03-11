@@ -27,7 +27,7 @@ pipeline {
                     }
                     failure{
                     script{
-                    pageTitleTHIRDTestResult = 'success'
+                    pageTitleTHIRDTestResult = 'failure'
                     }
                     }
                 }
